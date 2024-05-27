@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+matplotlib.rcParams["font.family"] = "Serif"
+matplotlib.rcParams["font.size"] = 10
+matplotlib.rcParams["axes.labelsize"] = 10
+matplotlib.rcParams["xtick.labelsize"] = 10
+matplotlib.rcParams["ytick.labelsize"] = 10
+matplotlib.rcParams["legend.fontsize"] = 10
+
+fig = plt.figure(facecolor="white")
+ax = fig.add_subplot(1, 1, 1)
+ax.grid()
+ax.set_axisbelow(True)
+ax.set_xlabel("Re")
+ax.set_ylabel("Lambda")
+ax.set_title("Plot of Lambda~Re")
+
+x = np.array([0.9471326293945312E+03,0.1420698974609375E+04,0.1894265258789062E+04,0.2367831542968750E+04,0.2841397949218750E+04,0.3314964111328125E+04,0.3788530517578125E+04,0.4262097167968750E+04,0.4735663085937500E+04,0.9471326171875000E+04,0.1420698925781250E+05,0.1894265234375000E+05,0.2367831250000000E+05,0.2841397851562500E+05,0.3314964453125000E+05,0.3788530468750000E+05,0.4262097265625000E+05,0.4735662500000000E+05])
+y = np.array([0.7149609178304672E-01,0.5649074539542198E-01,0.4567805677652359E-01,0.5465479195117950E-01,0.5604941025376320E-01,0.4344887286424637E-01,0.3872704878449440E-01,0.4629102721810341E-01,0.4671078547835350E-01,0.1781747676432133E-01,0.1691760309040546E-01,0.1518534868955612E-01,0.1425398234277964E-01,0.1340810023248196E-01,0.1309038978070021E-01,0.1159148383885622E-01,0.1207828987389803E-01,0.1175953447818756E-01])
+
+ax.plot(x,y,"b-o",linewidth=2,markersize=5,label="Lambda~Re")
+ax.set_xscale("log")
+ax.set_yscale("log")
+
+ax.legend(loc="best")
+
+plt.savefig("Lambda~Re1.png")
+

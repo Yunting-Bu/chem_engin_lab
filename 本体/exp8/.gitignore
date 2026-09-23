@@ -1,0 +1,11 @@
+__pycache__/
+.matplotlib-cache/
+*.pyc
+current_data.json
+current_results/
+examples/sample_results/
+examples/direct_results/
+sample_results/
+rtd_results/
+direct_results/
+dist/
